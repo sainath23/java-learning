@@ -16,10 +16,10 @@ public class ScheduledThreadPoolDemo {
     public static void main(String[] args) throws InterruptedException {
         ScheduledThreadPoolDemo demo = new ScheduledThreadPoolDemo();
         //demo.testSchedule();
-        //demo.testScheduleAtFixedRate();
+        demo.testScheduleAtFixedRate();
         //demo.testScheduleWithFixedDelay();
 
-        Runnable r = () -> {
+        /*Runnable r = () -> {
             long startTime = System.currentTimeMillis();
             try {
                 Thread.sleep(3000);
@@ -30,9 +30,9 @@ public class ScheduledThreadPoolDemo {
             long endTime = System.currentTimeMillis();
             long takenTime = (endTime - startTime) / 1000;
             System.out.println(Thread.currentThread().getName() + " took " + takenTime + " seconds to complete a task...");
-        };
+        };*/
         //scheduledThreadPool.scheduleAtFixedRate(r, 3, 2, TimeUnit.SECONDS);
-        scheduledThreadPool.scheduleWithFixedDelay(r, 3, 2, TimeUnit.SECONDS);
+        //scheduledThreadPool.scheduleWithFixedDelay(r, 3, 2, TimeUnit.SECONDS);
     }
 
     public void testSchedule() throws InterruptedException {

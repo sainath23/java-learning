@@ -6,7 +6,7 @@ public class ClassToSerialize implements Serializable {
     //private static final long serialVersionUID = 4799287591930153135L;
 
     private int x = 10;
-    private String str = "Sainath";
+    private String str = "Sainath Parkar";
     private transient String password = "password";
     //private int y = 20;
 

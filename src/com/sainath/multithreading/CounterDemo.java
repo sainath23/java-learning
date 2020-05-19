@@ -45,5 +45,18 @@ public class CounterDemo {
         t2.join();
 
         System.out.println(counter.getCount());
+
+        AtomicInteger atomicInteger = new AtomicInteger();
+        Runnable r = () -> {
+            int i = 0;
+            while (i < 100) {
+                atomicInteger.incrementAndGet();
+                i++;
+            }
+        };
+        new Thread(r).start();
+        new Thread(r).start();
+        Thread.sleep(1000);
+        System.out.println(atomicInteger.get());
     }
 }

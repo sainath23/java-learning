@@ -7,7 +7,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ProducerConsumerUsingOwnBQ {
-    private class MyBlockingQueue<E> {
+    private static class MyBlockingQueue<E> {
         private final Queue<E> queue;
         private int maxSize;
         private final ReentrantLock lock = new ReentrantLock(true);

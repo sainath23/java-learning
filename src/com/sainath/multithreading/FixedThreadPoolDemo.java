@@ -5,6 +5,7 @@ import java.util.Queue;
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class FixedThreadPoolDemo {
@@ -31,5 +32,6 @@ public class FixedThreadPoolDemo {
         fixedThreadPool.shutdown();
         fixedThreadPool.awaitTermination(2, TimeUnit.MINUTES);
         System.out.println("FINAL QUEUE SIZE = " + queue.size());
+        ((ThreadPoolExecutor)fixedThreadPool).setCorePoolSize(3);
     }
 }

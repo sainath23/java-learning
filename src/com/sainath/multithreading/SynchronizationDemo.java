@@ -5,8 +5,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class SynchronizationDemo {
 
-    private class Counter {
-        private int count;
+    private static class Counter {
+        private volatile int count;
 
         public synchronized void increment() {
             count++;
@@ -18,8 +18,7 @@ public class SynchronizationDemo {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        SynchronizationDemo demo = new SynchronizationDemo();
-        Counter counter = demo.new Counter();
+        Counter counter = new Counter();
         Lock lock = new ReentrantLock();
         Runnable r = () -> {
             //lock.lock();

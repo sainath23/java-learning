@@ -22,7 +22,7 @@ public class SemaphoreDemo {
                 e.printStackTrace();
             } finally {
                 System.out.println(Thread.currentThread().getName() + " done with its work. It is now releasing the semaphore...");
-                semaphore.release();
+                semaphore.release(0);
                 System.out.println(Thread.currentThread().getName() + " has released semaphore permit. permit count = " + semaphore.availablePermits());
             }
         };

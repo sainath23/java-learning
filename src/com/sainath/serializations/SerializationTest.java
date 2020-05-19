@@ -26,9 +26,9 @@ public class SerializationTest {
         FileInputStream fis = new FileInputStream(file);
         ObjectInputStream ois = new ObjectInputStream(fis);
         ClassToSerialize st1 = (ClassToSerialize) ois.readObject();
-        System.out.println(st1.getX());
+        /*System.out.println(st1.getX());
         System.out.println(st1.getStr());
-        System.out.println(st1.getPassword());
+        System.out.println(st1.getPassword());*/
         //System.out.println(st1.getY());
         //Collections.synchronizedList()
     }

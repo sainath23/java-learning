@@ -25,6 +25,7 @@ public class ScatterAndGatherProblemCountDownLatch {
             this.websiteName = websiteName;
             this.websitePriceMap = websitePriceMap;
             this.countDownLatch = countDownLatch;
+            System.out.println(this.countDownLatch.getCount());
         }
 
         @Override
